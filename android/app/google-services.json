@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "843853369208",
+    "project_id": "rencation",
+    "storage_bucket": "rencation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843853369208:android:00cabb6873358a6685c28d",
+        "android_client_info": {
+          "package_name": "codes.rizal.rentcation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843853369208-bqb17e9amvant7mp6k8r7phdp3be6b0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_aCzEBF8NPz4U0ctCZec2r_us0uJcHGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843853369208-bqb17e9amvant7mp6k8r7phdp3be6b0u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

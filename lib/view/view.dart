@@ -1,0 +1,33 @@
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:qr_flutter/qr_flutter.dart';
+import 'package:rentcation/model/entity/hotel_response.dart';
+import 'package:rentcation/model/entity/hotel_search_response.dart';
+import 'package:rentcation/model/entity/order_response.dart';
+import 'package:rentcation/utils/result_state.dart';
+import 'package:rentcation/utils/router_path.dart' as route;
+import 'package:rentcation/utils/validator.dart';
+import 'package:rentcation/view_model/auth_view_model.dart';
+import 'package:provider/provider.dart';
+import 'package:rentcation/view_model/hotel_view_model.dart';
+import 'package:rentcation/view_model/order_view_model.dart';
+import 'package:rentcation/view_model/user_view_model.dart';
+
+part 'sign_up_page.dart';
+part 'sign_in_page.dart';
+part 'splash_page.dart';
+part 'home_page.dart';
+part 'home_search_page.dart';
+part 'hotel_result_page.dart';
+part 'hotel_detail_page.dart';
+part 'city_list_page.dart';
+part 'room_result_page.dart';
+part 'home_profile_page.dart';
+part 'checkout_page.dart';
+part 'order_history_page.dart';
+part 'order_detail_page.dart';
+part 'raiting.dart';
+
+Helper _helper = Helper();
