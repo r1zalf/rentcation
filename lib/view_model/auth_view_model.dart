@@ -7,7 +7,6 @@ class AuthViewModel extends ChangeNotifier {
 
   // Field
   String _errorMsg;
-  String _uid;
 
   // Field getter
   String get errorMsg => _errorMsg;

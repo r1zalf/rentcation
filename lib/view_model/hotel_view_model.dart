@@ -17,9 +17,7 @@ class HotelViewModel extends ChangeNotifier {
   HotelSearchResponse _hotelSearchResponse;
   Hotelx _hotelx;
   Hotel _hotely;
-  String timeInSecond = (DateTime.now().millisecondsSinceEpoch.toInt() / 1000)
-                    .round()
-                    .toString();
+  
 
   String _checkIn = "";
   String _checkOut = "";
@@ -178,6 +176,9 @@ class HotelViewModel extends ChangeNotifier {
   }
 
   searchHotel() async {
+    String timeInSecond = (DateTime.now().millisecondsSinceEpoch.toInt() / 1000)
+                    .round()
+                    .toString();
     try {
       _hotelSearch = ResultState.Loading;
       notifyListeners();

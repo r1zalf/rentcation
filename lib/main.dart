@@ -1,7 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:rentcation/utils/result_state.dart';
 import 'package:rentcation/utils/router.dart';
 import 'package:rentcation/utils/theme.dart';
 import 'package:rentcation/utils/router_path.dart' as route;

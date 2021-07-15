@@ -287,30 +287,104 @@ class _HomeSearchPageState extends State<HomeSearchPage> {
 
               CarouselSlider(
                 options: CarouselOptions(height: 180),
-                items: [1, 2, 3, 4, 5].map((i) {
+                items: [
+                  "https://img.freepik.com/free-vector/sale-promotion-banner-template_74379-177.jpg",
+                  "https://img.freepik.com/free-vector/modern-sale-banner-colorful-comic-style_1361-1314.jpg",
+                  "https://static.vecteezy.com/system/resources/thumbnails/002/038/176/small/weekend-sale-banner-template-promotion-vector.jpg",
+                ].map((i) {
                   return Builder(
                     builder: (BuildContext context) {
                       return Container(
                         width: MediaQuery.of(context).size.width,
                         margin: EdgeInsets.symmetric(horizontal: 5.0),
                         decoration: BoxDecoration(
-                          color: Theme.of(context).accentColor,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'dummy banner promo',
-                            style: Theme.of(context)
-                                .textTheme
-                                .headline3
-                                .copyWith(fontWeight: FontWeight.w600),
+                          image: DecorationImage(
+                            image: NetworkImage(i),
+                            scale: 1,
+                            fit: BoxFit.cover,
                           ),
+                          borderRadius: BorderRadius.circular(8),
                         ),
                       );
                     },
                   );
                 }).toList(),
-              )
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 24, top: 24, bottom: 12),
+                child: Text(
+                  "Recomendation Destinations",
+                  style: Theme.of(context).textTheme.headline4.copyWith(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w600,
+                      ),
+                ),
+              ),
+              Container(
+                height: 180,
+                child: ListView(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  children: uriRecom3
+                      .map(
+                        (e) => Container(
+                          margin: EdgeInsets.only(
+                              left: uriRecom3.indexOf(e) == 0 ? 24 : 0,
+                              right: 12),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 140,
+                                height: 90,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12),
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    scale: 1,
+                                    image: NetworkImage(e["img"]),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 6, top: 6),
+                                child: Text(
+                                  e["name"],
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headline5
+                                      .copyWith(fontWeight: FontWeight.w600),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 6),
+                                child: Text(
+                                  e["price"],
+                                  style: Theme.of(context).textTheme.headline5,
+                                ),
+                              ),
+                              SizedBox(height:  12,),
+                              Container(
+                                margin: EdgeInsets.only(left: 6, bottom: 6),
+                                child: RaitingStras(
+                                  voteAverage: 4,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                      .toList(),
+                ),
+              ),
+              SizedBox(
+                height: 60,
+              ),
             ],
           ),
         ],

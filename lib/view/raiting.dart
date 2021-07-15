@@ -20,7 +20,7 @@ class RaitingStras extends StatelessWidget {
     List<Widget> widgets = List.generate(5, (index) {
       return Icon(
         index < n ? Icons.star : Icons.star_border_outlined,
-        color: Theme.of(context).primaryColor,
+        color: Colors.orange[300],
         size: starSize,
       );
     });

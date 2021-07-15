@@ -6,6 +6,7 @@ import 'package:qr_flutter/qr_flutter.dart';
 import 'package:rentcation/model/entity/hotel_response.dart';
 import 'package:rentcation/model/entity/hotel_search_response.dart';
 import 'package:rentcation/model/entity/order_response.dart';
+import 'package:rentcation/utils/dummy.dart';
 import 'package:rentcation/utils/result_state.dart';
 import 'package:rentcation/utils/router_path.dart' as route;
 import 'package:rentcation/utils/validator.dart';
